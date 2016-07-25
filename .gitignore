@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+.idea
+*.sqlite3
+secrets.json
+.coverage
+*.log
