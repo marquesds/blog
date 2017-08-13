@@ -1,5 +1,5 @@
 from django.test import TestCase
 
 
-class PostTest(TestCase):
+class PostTestCase(TestCase):
     pass

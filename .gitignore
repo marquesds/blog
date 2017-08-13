@@ -1,7 +1,7 @@
-*.pyc
+*.py[co]
 __pycache__/
 .idea
+.venv
 *.sqlite3
-secrets.json
 .coverage
 *.log

@@ -1,21 +1,20 @@
 language: python
 
 python:
-  - "3.4"
   - "3.5"
+  - "3.6"
 
 services:
   - mysql
 
 before_install:
-  - echo '{"local":{"SECRET_KEY":"some-fancy-key","DATABASE":{"DB_NAME":"blog","DB_USER":"root","DB_PWD":"","DB_HOST":"127.0.0.1","DB_PORT":3306}}}' > src/config/settings/secrets.json
   - mysql -e "create database IF NOT EXISTS blog_test;" -uroot
 
 install:
-  - pip install -r src/config/requirements/local.txt
+  - pip install -r requirements.txt
 
 script:
-  - coverage run --source=src src/manage.py test src
+  - coverage run --source=apps manage.py test apps
 
 after_success:
   - coverage report

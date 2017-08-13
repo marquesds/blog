@@ -1,4 +1,0 @@
--r base.txt
-ipython==5.0.0
-coverage==4.1
-coveralls==1.1
